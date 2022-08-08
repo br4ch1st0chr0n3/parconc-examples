@@ -1,0 +1,169 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           parconc-examples
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/parconc-examples#readme>
+homepage:       https://github.com/githubuser/parconc-examples#readme
+bug-reports:    https://github.com/githubuser/parconc-examples/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2022 Author name here
+license:        BSD3
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+data-files:
+    sudoku17.1000.txt
+    sudoku17.16000.txt
+    sudoku17.49151.txt
+    chanbench.hs
+    findpar5.hs
+    parlist.hs
+    other/correcter.hs
+    other/arithgame.hs
+    other/game.hs
+    other/README
+    distrib-db/WorkerSample.hs
+    distrib-db/DatabaseSample.hs
+    sudoku-par1.hs
+    sudoku-par2.hs
+    sudoku-par3.hs
+    sudoku-par4.hs
+    kmeans/Makefile
+    timeout2.hs
+    parinfer/benchmark.in
+    tmvar.hs
+    windowman.hs
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/parconc-examples
+
+executable distrib-chat-exe
+  main-is: distrib-chat/chat.hs
+  other-modules:
+      ConcurrentUtils
+      DistribUtils
+  build-depends:
+      bytestring
+    , containers
+    , distributed-process
+    , network
+    , stm
+    , text
+  default-language: Haskell2010
+
+executable distrib-chat-noslave-exe
+  main-is: distrib-chat/chat-noslave.hs
+  other-modules:
+      ConcurrentUtils
+  build-depends:
+      bytestring
+    , containers
+    , distributed-process
+    , network
+    , stm
+    , text
+  default-language: Haskell2010
+
+executable distrib-db-exe
+  main-is: db.hs
+  other-modules:
+      DistribUtils
+      Database
+  hs-source-dirs:
+      ./
+      distrib-db
+  build-depends:
+      bytestring
+    , containers
+    , distributed-process
+    , network
+    , stm
+    , text
+  default-language: Haskell2010
+
+executable ping-exe
+  main-is: distrib-ping/ping.hs
+  other-modules:
+      DistribUtils
+  build-depends:
+      bytestring
+    , containers
+    , distributed-process
+    , network
+    , stm
+    , text
+  default-language: Haskell2010
+
+executable ping-fail-exe
+  main-is: distrib-ping/ping-fail.hs
+  other-modules:
+      DistribUtils
+  build-depends:
+      bytestring
+    , containers
+    , distributed-process
+    , network
+    , stm
+    , text
+  default-language: Haskell2010
+
+executable ping-multi-exe
+  main-is: distrib-ping/ping-multi.hs
+  other-modules:
+      DistribUtils
+  build-depends:
+      bytestring
+    , containers
+    , distributed-process
+    , network
+    , stm
+    , text
+  default-language: Haskell2010
+
+executable ping-tc-exe
+  main-is: distrib-ping/ping-tc.hs
+  other-modules:
+      DistribUtils
+  build-depends:
+      bytestring
+    , containers
+    , distributed-process
+    , network
+    , stm
+    , text
+  default-language: Haskell2010
+
+executable ping-tc-merge-exe
+  main-is: distrib-ping/ping-tc-merge.hs
+  other-modules:
+      DistribUtils
+  build-depends:
+      bytestring
+    , containers
+    , distributed-process
+    , network
+    , stm
+    , text
+  default-language: Haskell2010
+
+executable ping-tc-notify-exe
+  main-is: distrib-ping/ping-tc-notify.hs
+  other-modules:
+      DistribUtils
+  build-depends:
+      bytestring
+    , containers
+    , distributed-process
+    , network
+    , stm
+    , text
+  default-language: Haskell2010

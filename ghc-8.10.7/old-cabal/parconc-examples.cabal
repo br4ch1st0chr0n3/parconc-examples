@@ -245,23 +245,23 @@ executable fwsparse1
   hs-source-dirs: fwsparse
   ghc-options: -threaded
 
-executable  timetable
+executable timetable
   import: deps
   main-is: timetable.hs
 
-executable  timetable1
+executable timetable1
   import: deps
   main-is: timetable1.hs
 
-executable  timetable2
+executable timetable2
   import: deps
   main-is: timetable2.hs
 
-executable  timetable3
+executable timetable3
   import: deps
   main-is: timetable3.hs
 
-executable  parinfer
+executable parinfer
   import: deps
   main-is: parinfer.hs
   hs-source-dirs: parinfer
@@ -284,7 +284,7 @@ executable  parinfer
 -- -----------------------------------------------------------------------------
 -- par-repa
 
-executable  fwdense
+executable fwdense
   import: deps
   main-is: fwdense.hs
   build-depends:
@@ -293,7 +293,7 @@ executable  fwdense
   if flag(llvm)
      ghc-options: -fllvm
 
-executable  fwdense1
+executable fwdense1
   import: deps
   main-is: fwdense1.hs
   build-depends:
@@ -318,7 +318,7 @@ executable rotateimage
 -- -----------------------------------------------------------------------------
 -- par-accel
 
-executable  fwaccel
+executable fwaccel
   import: deps
   main-is: fwaccel.hs
   other-modules: AccelerateCompat
@@ -328,7 +328,7 @@ executable  fwaccel
   else
      buildable: False
 
-executable  fwaccel-gpu
+executable fwaccel-gpu
   import: deps
   main-is: fwaccel-gpu.hs
   if flag(accelerate)
@@ -341,7 +341,7 @@ executable  fwaccel-gpu
      buildable: False
   ghc-options: -O2
 
-executable  mandel
+executable mandel
   import: deps
   main-is: mandel.hs
   other-modules: Config
@@ -361,46 +361,46 @@ executable  mandel
 -- -----------------------------------------------------------------------------
 -- conc-fork
 
-executable  fork
+executable fork
   import: deps
   main-is: fork.hs
 
-executable  reminders
+executable reminders
   import: deps
   main-is: reminders.hs
 
-executable  reminders2
+executable reminders2
   import: deps
   main-is: reminders2.hs
 
 -- -----------------------------------------------------------------------------
 -- conc-mvar
 
-executable  mvar1
+executable mvar1
   import: deps
   main-is: mvar1.hs
 
-executable  mvar2
+executable mvar2
   import: deps
   main-is: mvar2.hs
 
-executable  mvar3
+executable mvar3
   import: deps
   main-is: mvar3.hs
 
-executable  logger
+executable logger
   import: deps
   main-is: logger.hs
 
-executable  phonebook
+executable phonebook
   import: deps
   main-is: phonebook.hs
 
-executable  chan
+executable chan
   import: deps
   main-is: chan.hs
 
-executable  chan2
+executable chan2
   import: deps
   main-is: chan2.hs
 
@@ -412,27 +412,27 @@ executable geturls1
   main-is: geturls1.hs
   other-modules: GetURL
 
-executable  geturls2
+executable geturls2
   import: deps, network, http
   main-is: geturls2.hs
   other-modules: GetURL
 
-executable  geturls3
+executable geturls3
   import: deps, network, http
   main-is: geturls3.hs
   other-modules: TimeIt GetURL
 
-executable  geturls4
+executable geturls4
   import: deps, network, http
   main-is: geturls4.hs
   other-modules: GetURL
 
-executable  geturls5
+executable geturls5
   import: deps, network, http
   main-is: geturls5.hs
   other-modules: GetURL
 
-executable  geturls6
+executable geturls6
   import: deps, network, http
   main-is: geturls6.hs
   other-modules: TimeIt GetURL
@@ -440,33 +440,33 @@ executable  geturls6
 -- -----------------------------------------------------------------------------
 -- conc-asyncex
 
-executable  geturlscancel
+executable geturlscancel
   import: deps, network, http
   main-is: geturlscancel.hs
   other-modules: TimeIt GetURL
 
-executable  geturlscancel2
+executable geturlscancel2
   import: deps, network, http
   main-is: geturlscancel2.hs
   other-modules: TimeIt GetURL
 
-executable  modifytwo
+executable modifytwo
   import: deps
   main-is: modifytwo.hs
 
-executable  chan3
+executable chan3
   import: deps
   main-is: chan3.hs
 
-executable  timeout
+executable timeout
   import: deps
   main-is: timeout.hs
 
-executable  catch-mask
+executable catch-mask
   import: deps
   main-is: catch-mask.hs
 
-executable  catch-mask2
+executable catch-mask2
   import: deps
   main-is: catch-mask2.hs
 
@@ -478,40 +478,40 @@ executable  catch-mask2
 -- upper-case module names, so we use symbolic links from a
 -- subdirectory (mismodules) so that the repo remains safe to use on
 -- case-insensitive filesystems (#15).
-executable  miscmodules
+executable miscmodules
   import: deps
   main-is: miscmodules.hs
   hs-source-dirs: miscmodules .
   other-modules: TMVar, TList, TQueue, TBQueue, WindowManager
 
-executable  geturlsfirst
+executable geturlsfirst
   import: deps, network, http
   main-is: geturlsfirst.hs
   other-modules: ConcurrentUtils, GetURL
 
-executable  TChan
+executable TChan
   import: deps
   main-is: TChan.hs
 
 -- -----------------------------------------------------------------------------
 -- conc-higher
 
-executable  geturls7
+executable geturls7
   import: deps, network, http
   main-is: geturls7.hs
   other-modules: ConcurrentUtils, GetURL
 
-executable  geturls8
+executable geturls8
   import: deps, network, http
   main-is: geturls8.hs
   other-modules: Async, GetURL
 
-executable  geturls9
+executable geturls9
   import: deps, network, http
   main-is: geturls9.hs
   other-modules: Async, GetURL
 
-executable  timeout2
+executable timeout2
   import: deps
   main-is: timeout.hs
 
@@ -551,12 +551,12 @@ executable findpar5
 -- -----------------------------------------------------------------------------
 -- conc-server
 
-executable  server
+executable server
   import: deps, network
   main-is: server.hs
   other-modules: ConcurrentUtils
 
-executable  server2
+executable server2
   import: deps, network
   main-is: server2.hs
   other-modules: ConcurrentUtils
@@ -619,23 +619,23 @@ executable distrib-db
 -- -----------------------------------------------------------------------------
 -- conc-debugging-tuning
 
-executable  mvar4
+executable mvar4
   import: deps
   main-is: mvar4.hs
 
-executable  deadlock1
+executable deadlock1
   import: deps
   main-is: deadlock1.hs
 
-executable  deadlock2
+executable deadlock2
   import: deps
   main-is: deadlock2.hs
 
-executable  threadperf1
+executable threadperf1
   import: deps
   main-is: threadperf1.hs
 
-executable  threadperf2
+executable threadperf2
   import: deps
   main-is: threadperf2.hs
   ghc-options: -rtsopts
@@ -643,19 +643,19 @@ executable  threadperf2
 -- -----------------------------------------------------------------------------
 -- Extras (exercises etc.)
 
-executable  bingtranslator
+executable bingtranslator
   import: deps, network, http
   main-is: bingtranslator.hs
   other-modules: BingTranslate GetURL
   hs-source-dirs: other .
 
-executable  bingtranslatorconc
+executable bingtranslatorconc
   import: deps, network, http
   main-is: bingtranslatorconc.hs
   other-modules: BingTranslate GetURL
   hs-source-dirs: other .
 
-executable  geturlsstm
+executable geturlsstm
   import: deps, network, http
   main-is: geturlsstm.hs
   other-modules: TimeIt GetURL

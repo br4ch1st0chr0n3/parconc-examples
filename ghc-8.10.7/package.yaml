@@ -23,7 +23,6 @@ dependencies:
   - array
   - async
   - base
-  - accelerate
   - binary
   - bytestring
   - containers
@@ -44,28 +43,26 @@ dependencies:
   - http-conduit
   - network-uri
   - abstract-par
-  # - repa-io
-  # - repa-devil
 
 # -- -f llvm: enable -fllvm to GHC; requires LLVM to be installed, but
 # -- makes the Repa programs faster
 
-flags:
-  llvm:
-    default: False
-    manual: False
-  devil:
-    default: False
-    manual: False
-  cuda:
-    default: False
-    manual: False
-  accelerate:
-    default: True
-    manual: True
-  distributed:
-    default: True
-    manual: True
+# flags:
+#   llvm:
+#     default: False
+#     manual: False
+#   devil:
+#     default: False
+#     manual: False
+#   cuda:
+#     default: False
+#     manual: False
+#   accelerate:
+#     default: True
+#     manual: True
+#   distributed:
+#     default: True
+#     manual: True
   # TODO
   # network26: True
 
@@ -212,6 +209,7 @@ executables:
       - alex:alex
       - happy:happy
 
+# Uses too old libs, so excluded
   # # -- -----------------------------------------------------------------------------
   # # -- par-repa
   # # TODO
@@ -253,25 +251,25 @@ executables:
   #   main: fwaccel.hs
   #   other-modules: AccelerateCompat
   #   ghc-options: -O2
-  #   # TODO
-  #   # if flag(accelerate)
-  #   #   dependencies: accelerate >= 0.12 && < 1.3
-  #   # else
-  #   #   buildable: False
+    # TODO
+    # if flag(accelerate)
+    #   dependencies: accelerate >= 0.12 && < 1.3
+    # else
+    #   buildable: False
 
   # # TODO
   # fwaccel-gpu-exe:
   #   main: fwaccel-gpu.hs
   #   ghc-options: -O2
   # # TODO
-  # # if flag(accelerate)
-  # #   dependencies: accelerate >= 0.12 && < 1.3
-  # # else
-  # #   buildable: False
-  # # if flag(cuda)
-  # #   dependencies: accelerate-cuda >= 0.12 && < 0.15
-  # # else
-  # #   buildable: False
+  # if flag(accelerate)
+  #   dependencies: accelerate >= 0.12 && < 1.3
+  # else
+  #   buildable: False
+  # if flag(cuda)
+  #   dependencies: accelerate-cuda >= 0.12 && < 0.15
+  # else
+  #   buildable: False
 
   # # TODO
   # mandel-exe:
@@ -531,6 +529,7 @@ executables:
     main: chat.hs
     other-modules: ConcurrentUtils
 
+# Uses too old libs, so is excluded
   # -- -----------------------------------------------------------------------------
   # -- conc-distrib
 
@@ -683,8 +682,8 @@ data-files:
   - other/arithgame.hs
   - other/game.hs
   - other/README
-  - distrib-db/WorkerSample.hs
-  - distrib-db/DatabaseSample.hs
+  # - distrib-db/WorkerSample.hs
+  # - distrib-db/DatabaseSample.hs
   - sudoku-par1.hs
   - sudoku-par2.hs
   - sudoku-par3.hs

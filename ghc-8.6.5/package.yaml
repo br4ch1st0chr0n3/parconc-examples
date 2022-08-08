@@ -1,0 +1,705 @@
+name: parconc-examples
+version: 0.1.0.0
+github: "githubuser/parconc-examples"
+license: BSD3
+author: "Author name here"
+maintainer: "example@example.com"
+copyright: "2022 Author name here"
+
+extra-source-files:
+  - README.md
+  - ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description: Please see the README on GitHub at <https://github.com/githubuser/parconc-examples#readme>
+
+dependencies:
+  - distributed-process
+  - bytestring
+  - containers
+  - stm
+  - text
+  # - array
+  # - aeson
+  # - attopasec
+  # - async
+  # - base
+  # - binary
+  # - containers
+  # - deepseq
+  # - directory
+  # - filepath
+  # - monad-par
+  # - parallel
+  # - random
+  # - stm
+  # - time
+  # - template
+  # - transformers
+  # - utf8-string
+  # - vector
+  # - xml
+  # - network
+  # - http-conduit
+  # - network-uri
+  # - abstract-par
+
+# -- -f llvm: enable -fllvm to GHC; requires LLVM to be installed, but
+# -- makes the Repa programs faster
+
+# flags:
+#   llvm:
+#     default: False
+#     manual: False
+#   devil:
+#     default: False
+#     manual: False
+#   cuda:
+#     default: False
+#     manual: False
+#   accelerate:
+#     default: True
+#     manual: True
+#   distributed:
+#     default: True
+#     manual: True
+  # TODO
+  # network26: True
+
+# TODO
+# import: deps
+
+executables:
+  # -----------------------------------------------------------------------------
+  # par-eval
+
+  # rpar-exe:
+  #   ghc-options:
+  #     - -threaded
+  #     - -rtsopts
+  #     - -with-rtsopts=-N
+  #   main: rpar.hs
+
+  # sudoku1-exe:
+  #   main: sudoku1.hs
+  #   other-modules: Sudoku
+
+  # sudoku2-exe:
+  #   main: sudoku2.hs
+  #   other-modules: Sudoku
+  #   ghc-options: -threaded
+
+  # sudoku3-exe:
+  #   main: sudoku3.hs
+  #   other-modules: Sudoku
+  #   ghc-options: -threaded
+
+  # sudoku4-exe:
+  #   main: sudoku4.hs
+  #   other-modules: Sudoku
+  #   ghc-options: -threaded
+
+  # sudoku5-exe:
+  #   main: sudoku5.hs
+  #   other-modules: Sudoku
+  #   ghc-options: -threaded
+
+  # # -----------------------------------------------------------------------------
+  # # par-strat
+
+  # strat-exe:
+  #   main: strat.hs
+  #   ghc-options: -threaded
+
+  # strat2-exe:
+  #   main: strat2.hs
+  #   ghc-options: -threaded
+
+  # strat3-exe:
+  #   main: strat3.hs
+  #   ghc-options: -threaded
+
+  # rsa-exe:
+  #   main: rsa.hs
+  #   other-modules: ByteStringCompat
+
+  # rsa1-exe:
+  #   main: rsa1.hs
+  #   other-modules: ByteStringCompat
+  #   ghc-options: -threaded
+
+  # rsa2-exe:
+  #   main: rsa2.hs
+  #   other-modules: ByteStringCompat
+  #   ghc-options: -threaded
+
+  # kmeans-exe:
+  #   source-dirs: kmeans
+  #   main: kmeans.hs
+  #   other-modules: KMeansCore
+  #   ghc-options: -threaded
+
+  # GenSamples-exe:
+  #   source-dirs: kmeans
+  #   main: GenSamples.hs
+  #   other-modules: KMeansCore
+  #   dependencies:
+  #     normaldistribution
+
+  # # -- -----------------------------------------------------------------------------
+  # # -- par-monad
+
+  # parmonad-exe:
+  #   main: parmonad.hs
+  #   ghc-options: -threaded
+
+  # rsa-pipeline-exe:
+  #   main: rsa-pipeline.hs
+  #   other-modules:
+  #     - ByteStringCompat
+  #     - Stream
+  #   ghc-options: -threaded
+
+  # fwsparse-exe:
+  #   main: fwsparse.hs
+  #   other-modules:
+  #     - SparseGraph
+  #     - MapCompat
+  #   source-dirs: fwsparse
+
+  # fwsparse1-exe:
+  #   main: fwsparse1.hs
+  #   other-modules:
+  #     - SparseGraph
+  #     - MapCompat
+  #   source-dirs: fwsparse
+  #   ghc-options: -threaded
+
+  # timetable-exe:
+  #   main: timetable.hs
+
+  # timetable1-exe:
+  #   main: timetable1.hs
+
+  # timetable2-exe:
+  #   main: timetable2.hs
+
+  # timetable3-exe:
+  #   main: timetable3.hs
+
+  # parinfer-exe:
+  #   main: parinfer.hs
+  #   source-dirs: parinfer
+  #   ghc-options: -threaded
+  #   other-modules:
+  #     - InferMonad
+  #     - Term
+  #     - FiniteMap
+  #     - Shows
+  #     - Environment
+  #     - Lex
+  #     - MaybeM
+  #     - Parse
+  #     - MyList
+  #     - Type
+  #     - Infer
+  #     - Substitution
+  #     - StateX
+  #   build-tools:
+  #     - alex:alex
+  #     - happy:happy
+
+# Uses too old libs, so excluded
+  # -- -----------------------------------------------------------------------------
+  # -- par-repa
+  # TODO
+  # fwdense-exe:
+  #   main: fwdense.hs
+  #   dependencies: repa
+  #   ghc-options: -O2
+  #   # # TODO
+  #   # when:
+  #   #   - condition: flag(llvm)
+  #   #     ghc-options: -fllvm
+
+  # # TODO
+  # fwdense1-exe:
+  #   main: fwdense1.hs
+  #   dependencies: repa
+  #   ghc-options: -O2 -threaded
+  #   # # TODO
+  #   # when:
+  #   #   - condition: flag(llvm)
+  #   #     ghc-options: -fllvm
+
+  # # TODO
+  # rotateimage-exe:
+  #   main: rotateimage.hs
+  #   dependencies: repa
+  #   ghc-options: -O2 -threaded
+  #   # when:
+  #   #   - condition: flag(devil)
+  #   #     dependencies: repa-devil
+  #   # else
+  #   #   buildable: False
+  #   # if flag(llvm)
+  #   #   ghc-options: -fllvm
+
+  # # -- -----------------------------------------------------------------------------
+  # # -- par-accel
+
+  # # TODO
+  # fwaccel-exe:
+  #   main: fwaccel.hs
+  #   other-modules: AccelerateCompat
+  #   ghc-options: -O2
+  #   # TODO
+  #   # if flag(accelerate)
+  #   #   dependencies: accelerate >= 0.12 && < 1.3
+  #   # else
+  #   #   buildable: False
+
+  # # TODO
+  # fwaccel-gpu-exe:
+  #   main: fwaccel-gpu.hs
+  #   ghc-options: -O2
+  # # TODO
+  # # if flag(accelerate)
+  # #   dependencies: accelerate >= 0.12 && < 1.3
+  # # else
+  # #   buildable: False
+  # # if flag(cuda)
+  # #   dependencies: accelerate-cuda >= 0.12 && < 0.15
+  # # else
+  # #   buildable: False
+
+  # # TODO
+  # mandel-exe:
+  #   main: mandel.hs
+  #   other-modules: Config
+  #   source-dirs: mandel
+  #   dependencies: fclabels
+  #   ghc-options: -O2
+  #   # if flag(accelerate)
+  #   #   dependencies: accelerate >= 0.12 && < 1.3
+  #   #                 , accelerate-io
+  #   # else
+  #   #   buildable: False
+  #   # if flag(cuda)
+  #   #   dependencies: accelerate-cuda >= 0.12 && < 0.15
+  #   # else
+  #   #   buildable: False
+
+#  # -- -----------------------------------------------------------------------------
+ # # -- conc-fork
+
+  # fork-exe:
+  #   main: fork.hs
+
+  # reminders-exe:
+  #   main: reminders.hs
+
+  # reminders2-exe:
+  #   main: reminders2.hs
+
+  # # -- -----------------------------------------------------------------------------
+  # # -- conc-mvar
+
+  # mvar1-exe:
+  #   main: mvar1.hs
+
+  # mvar2-exe:
+  #   main: mvar2.hs
+
+  # mvar3-exe:
+  #   main: mvar3.hs
+
+  # logger-exe:
+  #   main: logger.hs
+
+  # phonebook-exe:
+  #   main: phonebook.hs
+
+  # chan-exe:
+  #   main: chan.hs
+
+  # chan2-exe:
+  #   main: chan2.hs
+
+  # # -- -----------------------------------------------------------------------------
+  # # -- conc-overlap
+
+  # geturls1-exe:
+  #   main: geturls1.hs
+  #   other-modules:
+  #     - GetURL
+  #   dependencies:
+  #     - network
+  #     - http-conduit
+
+  # geturls2-exe:
+  #   main: geturls2.hs
+  #   other-modules:
+  #     - GetURL
+  #   dependencies:
+  #     - network
+  #     - http-conduit
+
+  # geturls3-exe:
+  #   main: geturls3.hs
+  #   other-modules:
+  #     - TimeIt
+  #     - GetURL
+  #   dependencies:
+  #     - network
+  #     - http-conduit
+
+  # geturls4-exe:
+  #   main: geturls4.hs
+  #   other-modules:
+  #     - GetURL
+  #   dependencies:
+  #     - network
+  #     - http-conduit
+
+  # geturls5-exe:
+  #   main: geturls5.hs
+  #   other-modules:
+  #     - GetURL
+  #   dependencies:
+  #     - network
+  #     - http-conduit
+
+  # geturls6-exe:
+  #   main: geturls6.hs
+  #   other-modules:
+  #     - TimeIt
+  #     - GetURL
+  #   dependencies:
+  #     - network
+  #     - http-conduit
+
+  # # -- -----------------------------------------------------------------------------
+  # # -- conc-asyncex
+
+  # geturlscancel-exe:
+  #   dependencies:
+  #     - network
+  #     - http-conduit
+  #   main: geturlscancel.hs
+  #   other-modules:
+  #     - TimeIt
+  #     - GetURL
+
+  # geturlscancel2-exe:
+  #   dependencies:
+  #     - network
+  #     - http-conduit
+  #   main: geturlscancel2.hs
+  #   other-modules:
+  #     - TimeIt
+  #     - GetURL
+
+  # modifytwo-exe:
+  #   main: modifytwo.hs
+
+  # chan3-exe:
+  #   main: chan3.hs
+
+  # timeout-exe:
+  #   main: timeout.hs
+
+  # catch-mask-exe:
+  #   main: catch-mask.hs
+
+  # catch-mask2-exe:
+  #   main: catch-mask2.hs
+
+  # # -- -----------------------------------------------------------------------------
+  # # -- conc-stm
+
+  # # -- NB. The book refers to "tmvar.hs" and "windowmanager.hs", so we
+  # # -- can't change rename these files.  However, we need to use proper
+  # # -- upper-case module names, so we use symbolic links from a
+  # # -- subdirectory (mismodules) so that the repo remains safe to use on
+  # # -- case-insensitive filesystems (#15).
+  # miscmodules-exe:
+  #   main: miscmodules.hs
+  #   source-dirs:
+  #     - miscmodules
+  #     - .
+  #   other-modules:
+  #     - TMVar
+  #     - TList
+  #     - TQueue
+  #     - TBQueue
+  #     - WindowManager
+
+  # geturlsfirst-exe:
+  #   dependencies:
+  #     - network
+  #     - http-conduit
+  #   main: geturlsfirst.hs
+  #   other-modules:
+  #     - ConcurrentUtils
+  #     - GetURL
+
+  # TChan-exe:
+  #   main: TChan.hs
+
+  # # -- -----------------------------------------------------------------------------
+  # # -- conc-higher
+  # geturls7-exe:
+  #   dependencies:
+  #     - network
+  #     - http-conduit
+  #   main: geturls7.hs
+  #   other-modules:
+  #     - ConcurrentUtils
+  #     - GetURL
+
+  # geturls8-exe:
+  #   dependencies:
+  #     - network
+  #     - http-conduit
+  #   main: geturls8.hs
+  #   other-modules:
+  #     - Async
+  #     - GetURL
+
+  # geturls9-exe:
+  #   dependencies:
+  #     - network
+  #     - http-conduit
+  #   main: geturls9.hs
+  #   other-modules:
+  #     - Async
+  #     - GetURL
+
+  # timeout2-exe:
+  #   main: timeout.hs
+
+  # # -- -----------------------------------------------------------------------------
+  # # -- conc-par
+
+  # findseq-exe:
+  #   main: findseq.hs
+
+  # findpar-exe:
+  #   main: findpar.hs
+  #   ghc-options: -threaded
+
+  # findpar2-exe:
+  #   main: findpar2.hs
+  #   ghc-options: -threaded
+
+  # findpar3-exe:
+  #   main: findpar3.hs
+  #   other-modules: CasIORef
+  #   ghc-options: -threaded
+
+  # findpar4-exe:
+  #   dependencies:
+  #     - monad-par
+  #   main: findpar4.hs
+  #   ghc-options: -threaded
+
+  # findpar5-exe:
+  #   dependencies:
+  #     - monad-par
+  #   main: findpar5.hs
+  #   ghc-options: -threaded
+
+  # # -- -----------------------------------------------------------------------------
+  # # -- conc-server
+
+  # server-exe:
+  #   dependencies:
+  #     - network
+  #   main: server.hs
+  #   other-modules: ConcurrentUtils
+
+  # server2-exe:
+  #   dependencies:
+  #     - network
+  #   main: server2.hs
+  #   other-modules: ConcurrentUtils
+
+  # chat-exe:
+  #   dependencies:
+  #     - network
+  #   main: chat.hs
+  #   other-modules: ConcurrentUtils
+
+# # Uses too old libs, so is excluded
+  # # -- -----------------------------------------------------------------------------
+  # # -- conc-distrib
+
+  # TODO
+  ping-exe:
+    dependencies:
+      - network
+      - distributed-process
+    main: distrib-ping/ping.hs
+    other-modules: DistribUtils
+
+  # TODO
+  ping-multi-exe:
+    dependencies:
+      - network
+      - distributed-process
+    main: distrib-ping/ping-multi.hs
+    other-modules: DistribUtils
+
+  # TODO
+  ping-tc-exe:
+    dependencies:
+      - network
+      - distributed-process
+    main: distrib-ping/ping-tc.hs
+    other-modules: DistribUtils
+
+  # TODO
+  ping-tc-merge-exe:
+    dependencies:
+      - network
+      - distributed-process
+    main: distrib-ping/ping-tc-merge.hs
+    other-modules: DistribUtils
+
+  # TODO
+  # -- extra, not in the text?
+  ping-tc-notify-exe:
+    dependencies:
+      - network
+      - distributed-process
+    main: distrib-ping/ping-tc-notify.hs
+    other-modules: DistribUtils
+
+  # TODO
+  ping-fail-exe:
+    dependencies:
+      - network
+      - distributed-process
+    main: distrib-ping/ping-fail.hs
+    other-modules: DistribUtils
+
+  # TODO
+  distrib-chat-exe:
+    dependencies:
+      - network
+      - distributed-process
+    main: distrib-chat/chat.hs
+    other-modules:
+      - ConcurrentUtils
+      - DistribUtils
+
+  # TODO
+  distrib-chat-noslave-exe:
+    dependencies:
+      - network
+      - distributed-process
+    main: distrib-chat/chat-noslave.hs
+    other-modules: ConcurrentUtils
+
+  # TODO
+  distrib-db-exe:
+    dependencies:
+      - network
+      - distributed-process
+    main: db.hs
+    source-dirs:
+      - .
+      - distrib-db
+    other-modules:
+      - DistribUtils
+      - Database
+
+  # # -- -----------------------------------------------------------------------------
+  # # -- conc-debugging-tuning
+
+  # mvar4-exe:
+  #   main: mvar4.hs
+
+  # deadlock1-exe:
+  #   main: deadlock1.hs
+
+  # deadlock2-exe:
+  #   main: deadlock2.hs
+
+  # threadperf1-exe:
+  #   main: threadperf1.hs
+
+  # threadperf2-exe:
+  #   main: threadperf2.hs
+  #   ghc-options: -rtsopts
+
+  # # -- -----------------------------------------------------------------------------
+  # # -- Extras (exercises etc.)
+
+  # # TODO
+  # bingtranslator-exe:
+  #   dependencies:
+  #     - network
+  #     - http-conduit
+  #   main: bingtranslator.hs
+  #   other-modules:
+  #     - BingTranslate
+  #     - GetURL
+  #   source-dirs:
+  #     - other
+  #     - .
+
+  # # TODO
+  # bingtranslatorconc-exe:
+  #   dependencies:
+  #     - network
+  #     - http-conduit
+  #   main: bingtranslatorconc.hs
+  #   other-modules:
+  #     - BingTranslate
+  #     - GetURL
+  #   source-dirs:
+  #     - other
+  #     - .
+
+  # # TODO
+  # geturlsstm-exe:
+  #   dependencies:
+  #     - network
+  #     - http-conduit
+  #   main: geturlsstm.hs
+  #   other-modules:
+  #     - TimeIt
+  #     - GetURL
+
+data-files:
+  - sudoku17.1000.txt
+  - sudoku17.16000.txt
+  - sudoku17.49151.txt
+  - chanbench.hs
+  - findpar5.hs
+  - parlist.hs
+  - other/correcter.hs
+  - other/arithgame.hs
+  - other/game.hs
+  - other/README
+  - distrib-db/WorkerSample.hs
+  - distrib-db/DatabaseSample.hs
+  - sudoku-par1.hs
+  - sudoku-par2.hs
+  - sudoku-par3.hs
+  - sudoku-par4.hs
+  - kmeans/Makefile
+  - timeout2.hs
+  - parinfer/benchmark.in
+  - tmvar.hs
+  - windowman.hs
+  - ChangeLog.md
+  - README.md

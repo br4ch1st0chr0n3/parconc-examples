@@ -61,3 +61,5 @@ main = do
   let ls = lines s
   let [r] = toList $ run $ find $ crcAll ls
   print (ls !! r)
+
+-- When i Code, do I touch the display that much&

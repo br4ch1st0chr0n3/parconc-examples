@@ -29,8 +29,6 @@ data-files:
     other/arithgame.hs
     other/game.hs
     other/README
-    distrib-db/WorkerSample.hs
-    distrib-db/DatabaseSample.hs
     sudoku-par1.hs
     sudoku-par2.hs
     sudoku-par3.hs
@@ -47,26 +45,6 @@ source-repository head
   type: git
   location: https://github.com/githubuser/parconc-examples
 
-flag accelerate
-  manual: True
-  default: True
-
-flag cuda
-  manual: False
-  default: False
-
-flag devil
-  manual: False
-  default: False
-
-flag distributed
-  manual: True
-  default: True
-
-flag llvm
-  manual: False
-  default: False
-
 executable GenSamples-exe
   main-is: GenSamples.hs
   other-modules:
@@ -75,7 +53,6 @@ executable GenSamples-exe
       kmeans
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -107,7 +84,6 @@ executable TChan-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -142,7 +118,6 @@ executable bingtranslator-exe
       ./
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -177,7 +152,6 @@ executable bingtranslatorconc-exe
       ./
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -208,7 +182,6 @@ executable catch-mask-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -239,7 +212,6 @@ executable catch-mask2-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -270,7 +242,6 @@ executable chan-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -301,7 +272,6 @@ executable chan2-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -332,7 +302,6 @@ executable chan3-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -363,7 +332,6 @@ executable chat-exe
       ConcurrentUtils
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -394,7 +362,6 @@ executable deadlock1-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -425,7 +392,6 @@ executable deadlock2-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -457,7 +423,6 @@ executable findpar-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -489,7 +454,6 @@ executable findpar2-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -521,7 +485,6 @@ executable findpar3-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -553,7 +516,6 @@ executable findpar4-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -585,7 +547,6 @@ executable findpar5-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -616,7 +577,6 @@ executable findseq-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -647,7 +607,6 @@ executable fork-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -681,7 +640,6 @@ executable fwsparse-exe
       fwsparse
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -716,7 +674,6 @@ executable fwsparse1-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -747,7 +704,6 @@ executable geturls1-exe
       GetURL
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -778,7 +734,6 @@ executable geturls2-exe
       GetURL
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -810,7 +765,6 @@ executable geturls3-exe
       GetURL
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -841,7 +795,6 @@ executable geturls4-exe
       GetURL
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -872,7 +825,6 @@ executable geturls5-exe
       GetURL
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -904,7 +856,6 @@ executable geturls6-exe
       GetURL
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -936,7 +887,6 @@ executable geturls7-exe
       GetURL
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -968,7 +918,6 @@ executable geturls8-exe
       GetURL
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1000,7 +949,6 @@ executable geturls9-exe
       GetURL
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1032,7 +980,6 @@ executable geturlscancel-exe
       GetURL
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1064,7 +1011,6 @@ executable geturlscancel2-exe
       GetURL
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1096,7 +1042,6 @@ executable geturlsfirst-exe
       GetURL
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1128,7 +1073,6 @@ executable geturlsstm-exe
       GetURL
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1162,7 +1106,6 @@ executable kmeans-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1193,7 +1136,6 @@ executable logger-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1231,7 +1173,6 @@ executable miscmodules-exe
       ./
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1262,7 +1203,6 @@ executable modifytwo-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1293,7 +1233,6 @@ executable mvar1-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1324,7 +1263,6 @@ executable mvar2-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1355,7 +1293,6 @@ executable mvar3-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1386,7 +1323,6 @@ executable mvar4-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1435,7 +1371,6 @@ executable parinfer-exe
     , happy
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1467,7 +1402,6 @@ executable parmonad-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1498,7 +1432,6 @@ executable phonebook-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1529,7 +1462,6 @@ executable reminders-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1560,7 +1492,6 @@ executable reminders2-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1592,7 +1523,6 @@ executable rpar-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1623,7 +1553,6 @@ executable rsa-exe
       ByteStringCompat
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1656,7 +1585,6 @@ executable rsa-pipeline-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1688,7 +1616,6 @@ executable rsa1-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1720,7 +1647,6 @@ executable rsa2-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1751,7 +1677,6 @@ executable server-exe
       ConcurrentUtils
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1782,7 +1707,6 @@ executable server2-exe
       ConcurrentUtils
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1814,7 +1738,6 @@ executable strat-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1846,7 +1769,6 @@ executable strat2-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1878,7 +1800,6 @@ executable strat3-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1909,7 +1830,6 @@ executable sudoku1-exe
       Sudoku
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1941,7 +1861,6 @@ executable sudoku2-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -1973,7 +1892,6 @@ executable sudoku3-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -2005,7 +1923,6 @@ executable sudoku4-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -2037,7 +1954,6 @@ executable sudoku5-exe
   ghc-options: -threaded
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -2068,7 +1984,6 @@ executable threadperf1-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -2100,7 +2015,6 @@ executable threadperf2-exe
   ghc-options: -rtsopts
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -2131,7 +2045,6 @@ executable timeout-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -2162,7 +2075,6 @@ executable timeout2-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -2193,7 +2105,6 @@ executable timetable-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -2224,7 +2135,6 @@ executable timetable1-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -2255,7 +2165,6 @@ executable timetable2-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
@@ -2286,7 +2195,6 @@ executable timetable3-exe
       Paths_parconc_examples
   build-depends:
       abstract-par
-    , accelerate
     , array
     , async
     , base
